@@ -31,6 +31,7 @@ RUN yum -y --setopt=tsflags=nodocs update && \
 RUN rm /etc/php-fpm.d/www.conf
 ADD pool.conf /etc/php-fpm.d/
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+RUN mkdir /run/php-fpm
 
 CMD ["php-fpm", "-F"]
 
