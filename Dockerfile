@@ -3,7 +3,7 @@ MAINTAINER Julien Guyon <j.guyon@miveo.fr>
 
 RUN yum -y --setopt=tsflags=nodocs update && \
     yum -y --setopt=tsflags=nodocs --nogpgcheck install epel-release && \
-    yum -y --setopt=tsflags=nodocs --nogpgcheck install https://centos7.iuscommunity.org/ius-release.rpm && \
+    yum -y --setopt=tsflags=nodocs --nogpgcheck install https://repo.ius.io/ius-release-el7.rpm && \
     yum -y --setopt=tsflags=nodocs --nogpgcheck install php72u-cli \
         php72u-fpm \
         php72u-bcmath \
